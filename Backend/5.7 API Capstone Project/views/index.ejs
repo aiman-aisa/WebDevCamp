@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memes Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+<body class="d-flex h-100 text-center text-bg-light">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <main class="px-3">
+            <h1><%= title %></h1>
+            <p><img src="<%= memes %>" alt="meme" width="500" height="600"></p>
+            <p class="author">
+                <%= author %>
+            </p>
+        </main>
+    </div>
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<body>
+<%- include("partials/header.ejs") %>
+    <section class="vh-100 gradient-custom-2">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-12 col-xl-10">
+                    <div class="card mask-custom">
+                        <div class="card-body p-4 text-white">
+    
+                            <div class="text-center pt-3 pb-2">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+                                    alt="Check" width="60">
+                                <h2 class="my-4">Task List</h2>
+                                <h3><%= today %></h3>
+                            </div>
+                            <% if (locals.todayList && todayList.length != 0) { %>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <% todayList.forEach((list, index)=> { %>
+                                        <div class="box bg-white rounded my-1 mx-auto" style="width:500px">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input border-black mx-2" type="checkbox"/>
+                                                <label class="form-check-label text-black">
+                                                    <%= list %>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <% }) %>
+                                </div>
+                            <% } else { %>
+                                <h4 class="text-center">Please add a list</h4>
+                            <% } %>
+                            <form class="text-center my-3" action="/" method="post">
+                                <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                                <button type="submit" name="list" value=<%= today %>>+</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<%- include("partials/footer.ejs") %>
